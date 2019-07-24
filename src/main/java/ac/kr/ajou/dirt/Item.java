@@ -3,9 +3,7 @@ package ac.kr.ajou.dirt;
 public class Item {
 
     public String name;
-
     public int sellIn;
-
     public int quality;
 
     public Item(String name, int sellIn, int quality) {
@@ -14,6 +12,9 @@ public class Item {
         this.quality = quality;
     }
 
+    public void decrease_1_SellIn(){
+        this.sellIn--;
+    }
     @Override
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;

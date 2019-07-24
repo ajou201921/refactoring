@@ -16,10 +16,8 @@ public class MainApplication {
 
         IpAddressMacAddress process = new IpAddressMacAddress();
 
-        Set<String> process1 = process.process(pcBangEvent);
+        Set<String> process1 = process.buildCombinedIdentification(pcBangEvent);
 
-        process1.forEach(s -> {
-            System.out.println(s);
-        });
+        process1.forEach(System.out::println);
     }
 }

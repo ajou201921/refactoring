@@ -4,17 +4,20 @@ public class DuplicateSample {
 
     public int calc(EventData ed) {
         if (ed.getPrice() > 10) {
-            System.out.println(ed.getPrice());
-            System.out.println(ed.getEventName());
+            logPriceAndName(ed);
             return 1;
-        }  else {
-            if (ed.getEventName().equals("test")) {
-                System.out.println(ed.getPrice());
-                System.out.println(ed.getEventName());
-                return 2;
-            }
+        }
+        if (ed.getEventName().equals("test")) {
+            logPriceAndName(ed);
+            return 2;
         }
 
+
         return 0;
+    }
+
+    private void logPriceAndName(EventData ed) {
+        System.out.println(ed.getPrice());
+        System.out.println(ed.getEventName());
     }
 }
